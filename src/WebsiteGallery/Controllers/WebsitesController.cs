@@ -10,11 +10,30 @@ namespace WebsiteGallery.Controllers
     {
         public ActionResult Project() //Controller ACTION METHODS must also be public to access in URL
         {
-            if(DateTime.Today.DayOfWeek == DayOfWeek.Saturday)
+            //if(DateTime.Today.DayOfWeek == DayOfWeek.Saturday)
+            //{
+            //    return Redirect("https://jakeford.us");
+            //}
+            //return Content("WHAT UP MY NIGGA");
+            ViewBag.ProjectTitle = "Shoals <strong>TRAC</strong>";
+            ViewBag.Screenshot = "";
+            ViewBag.Requirements = new String[]
             {
-                return Redirect("https://jakeford.us");
-            }
-            return Content("WHAT UP MY NIGGA");
+                "Modern Design",
+                "Responsive",
+                "User Friendly",
+                "Self-Updated"
+            };
+            ViewBag.Technologies = new String[]
+            {
+                "WordPress",
+                "Bootstrap 4",
+                "HTML5",
+                "CSS3",
+                "Javascript",
+                "PHP"
+            };
+            return View();
         }
     }
 }
