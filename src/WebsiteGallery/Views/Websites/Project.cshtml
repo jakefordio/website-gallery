@@ -12,23 +12,19 @@
 <body>
     <div>
     <h1 style="color: red;">@Html.Raw(ViewBag.ProjectTitle)</h1>
-    @if (ViewBag.Requirements.Length > 0)
-    {
+    @if (ViewBag.Requirements.Length > 0) {
         <h2>Project Requirements:</h2>
         <ul>
-        @for (var i = 0; i < ViewBag.Requirements.Length; i++)
-        {
+        @for (var i = 0; i < ViewBag.Requirements.Length; i++) {
             <li>@ViewBag.Requirements[i]</li>
         }
         </ul>
     }
 
-    @if (ViewBag.Technologies.Length > 0)
-    {
+    @if (ViewBag.Technologies.Length > 0) {
         <h2>Technologies Used:</h2>
         <ul>
-        @for (var i = 0; i < ViewBag.Technologies.Length; i++)
-        {
+        @for (var i = 0; i < ViewBag.Technologies.Length; i++) {
             <li>@ViewBag.Technologies[i]</li>
         }
         </ul>
